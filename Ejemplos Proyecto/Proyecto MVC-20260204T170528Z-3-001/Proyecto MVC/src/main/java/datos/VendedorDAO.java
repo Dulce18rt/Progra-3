@@ -34,10 +34,10 @@ public class VendedorDAO {
 
         try {
             conn = Conexion.getConnection();
-            stmt = conn.prepareStatement(SQL_SELECT);
-            rs = stmt.executeQuery();
+            stmt = conn.prepareStatement(SQL_SELECT); // prepara la ejecutacion en base de datos 
+            rs = stmt.executeQuery(); //record set - un record de datos - un conjunto de datos 
             while (rs.next()) {
-                int id_vendedor = rs.getInt("id_vendedor");
+                int id_vendedor = rs.getInt("id_vendedor"); // campo de la base de datos
                 String nombre = rs.getString("nombrevendedor");
                 String direccion = rs.getString("direvendedor");
                 
